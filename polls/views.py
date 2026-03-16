@@ -14,9 +14,9 @@ from .models import Account
 @csrf_exempt
 def reg(request):
     if request.method == "POST":
-        body = json.load(request.body)
+        body = json.loads(request.body)
         try:
-            data=json.leads(request.body)
+            data=json.loads(request.body)
 
             login = data.get("login")
             password = data.get("password")
