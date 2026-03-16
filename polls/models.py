@@ -3,6 +3,12 @@ import datetime
 from django.utils import timezone
 from django.contrib import admin
 
+class Account(models.Model):
+    login = models.CharFied(max_length=100, unique = True)
+    password = models.CharField(max_length=100)
+    def__str__(self)
+    return self.login
+
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField("date published")
