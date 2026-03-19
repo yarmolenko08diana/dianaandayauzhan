@@ -8,6 +8,11 @@ class Account(models.Model):
     password = models.CharField(max_length=100)
     def __str__(self):
         return self.login
+    def get_dict(self):
+        return{
+            "login":self.login,
+            "password":self.password
+        }
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
